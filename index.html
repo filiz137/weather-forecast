@@ -11,8 +11,13 @@
 <body>
     <main id="main">
         <div style="color:rebeccapurple; font-size:30px" >
-            asdsad
-            {{ name }}
+           
+            <ul id="example-1">
+                <li v-for="item in weather">
+                    {{ item.name }} : {{ item.main.temp }} wind:{{ item.wind.speed }}
+                    <img v-bind:src="'http://openweathermap.org/img/w/' + item.weather[0].icon + '.png'" alt="">
+                </li>
+            </ul>
         </div>
     </main>
     
