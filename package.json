@@ -1,0 +1,25 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filiz137/weather-forecast.git"
+  },
+  "author": "Filiz Altinturk <info@filizaltinturk.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filiz137/weather-forecast/issues"
+  },
+  "homepage": "https://github.com/filiz137/weather-forecast#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.6.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
