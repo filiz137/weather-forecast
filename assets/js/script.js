@@ -8,6 +8,7 @@ var forecast = new Vue({
         APPID: 'b712b9a9b0785a9842d7c7ba49f37a5f',
         openweathermapAPI: 'http://api.openweathermap.org/data/2.5/',
         weather: [],
+        forecast: [],
         cities: [ 
             {
                 id: 2643743,
@@ -20,34 +21,45 @@ var forecast = new Vue({
                 icon: 'assets/img/city-icon/paris.svg'
             },
             {
-                id: 6356055,
-                name: 'Barcelona',
-                icon: 'assets/img/city-icon/barcelona.svg'
+                id: 2950159,
+                name: 'Berlin',
+                icon: 'assets/img/city-icon/berlin.svg'
             },
             {
                 id: 3169069,
                 name: 'Rome',
-                icon: 'assets/img/city-icon/roma.svg'
+                icon: 'assets/img/city-icon/rome.svg'
             },
             {
                 id: 2759794,
                 name: 'Amsterdam',
                 icon: 'assets/img/city-icon/amsterdam.svg'
             }
-        ]
+        ],
+        forecastDetail: false
     },
     methods: {
         forecastCity: function() {
             var citiesId = this.cities.map( function (obj) {
                 return obj.id;
             });
-            var url = this.openweathermapAPI + 'group?id=' + citiesId.join() + '&units=metric&appid=' + this.APPID;
-            this.$http.get(url).then(result => {
-
-                // get body data
+            // var cityId = citiesId.forEach( function (elm) {
+            //     console.log(elm)
+            // });
+ 
+            var citiesUrl = this.openweathermapAPI + 'group?id=' + citiesId.join() + '&units=metric&appid=' + this.APPID;
+            
+            var forecastUrl = this.openweathermapAPI + 'forecast?id=' + citiesId[0] + '&units=metric&appid=' + this.APPID;
+            
+            this.$http.get(citiesUrl).then(function (result) {
                 this.weather = result.body.list;
+            }, function (err) {
+                console.log('error!')
+            });
 
-            }, result => {
+            this.$http.get(forecastUrl).then(function (result) {
+                this.forecast = result.body.list;
+            }, function (err) {
                 console.log('error!')
             });
         }
