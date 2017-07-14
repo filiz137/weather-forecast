@@ -8,11 +8,40 @@ var forecast = new Vue({
         APPID: 'b712b9a9b0785a9842d7c7ba49f37a5f',
         openweathermapAPI: 'http://api.openweathermap.org/data/2.5/',
         weather: [],
-        cities: []
+        cities: [ 
+            {
+                id: 2643743,
+                name: 'London',
+                icon: 'assets/img/city-icon/london.svg'
+            },
+            {
+                id: 2968815,
+                name: 'Paris',
+                icon: 'assets/img/city-icon/paris.svg'
+            },
+            {
+                id: 6356055,
+                name: 'Barcelona',
+                icon: 'assets/img/city-icon/barcelona.svg'
+            },
+            {
+                id: 3169069,
+                name: 'Rome',
+                icon: 'assets/img/city-icon/roma.svg'
+            },
+            {
+                id: 2759794,
+                name: 'Amsterdam',
+                icon: 'assets/img/city-icon/amsterdam.svg'
+            }
+        ]
     },
     methods: {
         forecastCity: function() {
-            var url = this.openweathermapAPI + 'group?id=2643743,2968815,6356055,3169069,2759794&units=metric&appid=' + this.APPID;
+            var citiesId = this.cities.map( function (obj) {
+                return obj.id;
+            });
+            var url = this.openweathermapAPI + 'group?id=' + citiesId.join() + '&units=metric&appid=' + this.APPID;
             this.$http.get(url).then(result => {
 
                 // get body data
