@@ -26009,7 +26009,7 @@ _vue2.default.use(_vueRouter2.default);
 var routes = [{ path: '', component: _home2.default }, { path: '/detail/:id', component: _detail2.default }];
 
 var router = new _vueRouter2.default({
-    mode: 'history',
+    // mode: 'history',
     routes: routes
 });
 
