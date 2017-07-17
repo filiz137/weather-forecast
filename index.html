@@ -1,36 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Forecast</title>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/vue-resource@1.3.1/dist/vue-resource.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Forecast</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Oswald:300,700" rel="stylesheet">
 </head>
 <body>
-    <main id="main">
-        <div style="color:rebeccapurple; font-size:30px" >
-           
-            <ul id="example-1">
-                <li v-on:click="forecastDetail = !forecastDetail" v-for="item in weather">
-                    {{ item.name }} : {{ item.main.temp }} wind:{{ item.wind.speed }}
-                    <img v-bind:src="'http://openweathermap.org/img/w/' + item.weather[0].icon + '.png'" alt="">
-                </li>
-            </ul>
-            <div v-if="forecastDetail">
-                <img v-for="item in cities" v-bind:src="item.icon">
-                <ul style="list-style-type: decimal;">
-                    <li v-for="item in forecast">
-                    <div>{{ item.main.temp }} : {{ item.dt_txt }}</div>
-                    </li>
-                </ul>
-            </div>
-            
-            
-        </div>
-    </main>
-    
-    <script src="assets/js/script.js"></script>    
+  <main id="main">
+    <router-view></router-view>
+  </main>
 </body>
 </html>

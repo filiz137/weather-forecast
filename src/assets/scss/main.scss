@@ -1,0 +1,490 @@
+@import 'normalize';
+@import 'helpers';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $main-bg;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    @include mq(desktop, min) {
+        height: 100vh;
+    };
+}
+
+.error {
+  display: none;
+  &.warn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: $error-bg;
+    color: $error-text;
+    @include font-number();
+    @include font-size(14);
+    font-weight: 500;
+    z-index: 99;
+
+  }
+}
+
+.city {
+    $parentcity: &;
+    &-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding: 40px;
+        @include mq(tablet) {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+        };
+    }
+    &-card {
+        $parentcard: &;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 200px;
+        margin: 20px 0;
+        background-color: $card-bg;
+        border: 1px solid $card-border;
+        border-radius: 8px;
+        transition: all .2s ease-in-out;
+        @include mq(mobile, max) {
+            margin: 20px 0;
+        }
+        @include mq(tablet) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            margin: 20px;
+            width: auto;
+            height: 400px;
+        };
+        @include mq(desktop) {
+            width: calc((100% / 5) - 40px);
+        };
+        &.detail {
+            justify-content: flex-start;
+            flex-shrink: 0;
+            margin: 0;
+            width: 100%;
+            border-bottom: 4px solid $card-border;
+            border-radius: 8px 8px 0 0;
+            @include mq(desktop) {
+                border-radius: 8px 0 0 8px;
+            };
+            @include mq(desktop) {
+                width: 420px;
+                height: calc(100% - 40px);
+                max-height: 420px;
+                border: none;
+            };
+            &:hover {
+                box-shadow: none;
+            }
+            #{$parentcity}-status {
+                border-radius: 8px 0 0 0;
+                @include mq(tablet) {
+                    border-radius: 8px 8px 0 0;
+                };
+                @include mq(desktop) {
+                    border-radius: 8px 0 0 0;
+                };
+            }
+        }
+        &:hover {
+            box-shadow: 2px 2px 20px 0px rgba($scorpion, 0.4);
+        }
+    }
+    &-status {
+        position: relative;
+        display: flex;
+        height: 100%;
+        width: 40%;
+        min-width: 180px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: $card-status-bg;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 8px 0 0 8px;
+        overflow: hidden;
+        @include mq(tablet) {
+            width: 100%;
+            height: 50%;
+            border-radius: 8px 8px 0 0;
+        };
+        &:before {
+            position: absolute;
+            content: '';
+            display: flex;
+            background-color: rgba(255,255,255, 0.9);
+            width: 120%;
+            height: 110px;
+            border-radius: 50%;
+            bottom: -80px;
+            right: -10%;
+        }
+        &__desc {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            width: 100%;
+            @include font-number();
+            @include font-size(12);
+            text-transform: capitalize;
+            font-weight: 400;
+            text-align: right;
+            color: $card-text;
+        }
+        &__weather {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 40px;
+            stroke: 2;
+        }
+        &__cities {
+            width: 100%;
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        @include mq(tablet) {
+            height: 50%;
+        };
+    }
+    &-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-text();
+        @include font-size(20,40);
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $card-text;
+    }
+    &-date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-text();
+        @include font-size(14, 38);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $card-date;
+    }
+    &-weather {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        &__wind {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            @include font-number();
+            @include font-size(16, 16);
+            font-weight: 500;
+            color: $card-text;
+            sub {
+                @include font-number();
+                @include font-size(10);
+                font-weight: 400;
+                color: $card-wind;
+                text-transform: uppercase;
+            }
+        }
+        &__humidity {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            @include font-number();
+            @include font-size(16,16);
+            font-weight: 500;
+            color: $card-text;
+            sub {
+                @include font-number();
+                @include font-size(10);
+                font-weight: 400;
+                color: $card-humidity;
+                text-transform: uppercase;
+            }
+        }
+        &__temp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 40%);
+            @include font-number();
+            @include font-size(48);
+            font-weight: 700;
+            color: $card-text;
+            sup {
+                @include font-size(24);
+                font-weight: 400;
+                color: $card-text;
+            }
+        }
+    }
+}
+
+.forecast {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding: 40px;
+        @include mq(desktop) {
+            flex-direction: row;
+        };
+    }
+    &-detail {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        background-color: $card-bg;
+        border-radius: 0 0 8px 8px;
+        transition: all .2s ease-in-out;
+        @include mq(desktop) {
+            flex-direction: row;
+            width: calc(100% - 420px);
+            height: calc(100% - 40px);
+            max-height: 420px;
+            border-radius: 0 8px 8px 0;
+        };
+        &-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid $forecast-list-border;
+            @include mq(desktop) {
+                flex-direction: column;
+                width: calc(100% / 7);
+                height: 100%;
+            };
+        }
+        &__time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-number();
+            @include font-size(14, 28);
+            font-weight: 500;
+            color: $card-text;
+            white-space: nowrap;
+        }
+        &__weather {
+            display: flex;
+            align-self: center;
+            height: 100px;
+        }
+        &__desc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-number();
+            @include font-size(14);
+            font-weight: 500;
+            color: $card-text;
+        }
+        &__wind {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-number();
+            @include font-size(14);
+            font-weight: 500;
+            color: $card-text;
+        }
+        &__temp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-number();
+            @include font-size(32);
+            font-weight: 700;
+            color: $card-text;
+            sup {
+                @include font-size(18);
+                font-weight: 400;
+                color: $card-text;
+            }
+        }
+    }
+}
+
+.goback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    @include font-text();
+    @include font-size(14);
+    font-weight: 300;
+    color: $card-text;
+    text-decoration: underline;
+    @include mq(desktop) {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    };
+}
+
+.city {
+    $parentcity: &;
+    &-card {
+        &.loading {
+          &:before {
+            content: 'Loading ...';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: $loading-bg;
+            @include font-number();
+            @include font-size(14);
+            font-weight: 400;
+            color: $card-text;
+            white-space: nowrap;
+          }
+          &  a {
+            display: none;
+          }
+        }
+        &[class$="n"] {
+            #{$parentcity}-status {
+                background-color: $weather-night;
+                &-weather,
+                &-cities {
+                    [fill="#575757"] {
+                        fill: $weather-invert-icon;
+                    }
+                }
+                &-desc {
+                    color: $weather-invert-text;
+                }
+            }
+        }
+        &[class$="01d"],
+        &[class$="02d"]  {
+            #{$parentcity}-status {
+                background-color: $weather-sun;
+            }
+        }
+        &[class$="03d"]  {
+            #{$parentcity}-status {
+                background-color: $weather-cloud;
+            }
+        }
+         &[class$="04d"]  {
+            #{$parentcity}-status {
+                background-color: $weather-heavy-clouds;
+                &-weather,
+                &-cities {
+                    [fill="#575757"] {
+                        fill: $weather-invert-icon;
+                    }
+                }
+                &-desc {
+                    color: $weather-invert-text;
+                }
+            }
+        }
+         &[class$="09d"]  {
+            #{$parentcity}-status {
+                background-color: darken($weather-heavy-clouds, 20%);
+                &-weather,
+                &-cities {
+                    [fill="#575757"] {
+                        fill: $weather-invert-icon;
+                    }
+                }
+                &-desc {
+                    color: $weather-invert-text;
+                }
+            }
+        }
+        &[class$="13d"]  {
+            #{$parentcity}-status {
+                background-color: $weather-snow;
+            }
+        }
+        &[class$="10d"],
+        &[class$="11d"]  {
+            #{$parentcity}-status {
+                background-color: $weather-rain;
+                &-weather,
+                &-cities {
+                    [fill="#575757"] {
+                        fill: $weather-invert-icon;
+                    }
+                }
+                &-desc {
+                    color: $weather-invert-text;
+                }
+            }
+        }
+        &[class$="50d"]  {
+            #{$parentcity}-status {
+                background-color: $weather-mist;
+            }
+        }
+    }
+}

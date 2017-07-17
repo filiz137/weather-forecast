@@ -1,0 +1,100 @@
+//mixin
+
+$rem-baseline: 16;
+
+html {
+  font-size: $rem-baseline + px;
+}
+
+@mixin font-text() {
+  font-family: 'Oswald', sans-serif;
+}
+
+@mixin font-number() {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin font-size($size: $rem-baseline, $line: $size * 1.6) {
+	font-size: $size + px;
+  font-size: ($size / $rem-baseline) + rem;
+  line-height: ($line) + px;
+  line-height: ($line / $rem-baseline) + rem;
+}
+
+@mixin textcut {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+$breakpoints: (
+  "mobile": 360px,
+  "mobile-wide": 480px,
+  "tablet": 768px,
+  "tablet-landscape": 1024px,
+  "desktop": 1225px,
+  "desktop-wide": 1440px
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// Colors
+
+$pampas: #F4F2EF;
+$white: #FFF;
+$silver: #B5B5B5;
+$blacksqueeze: #EFF3F9;
+$scorpion: #575757;
+$blackpearl: #082d3f;
+$jaffa: #ED6B39;
+$supernova: #FFC601;
+$cloudburst: #272A5C;
+$iron: #DCDEE1;
+$gallery: #EDEDED;
+$steelblue: #528ab4;
+$vermilion: #ff3c01;
+
+$error-bg: $vermilion;
+$error-text: $white;
+$loading-bg: $blacksqueeze;
+
+$main-bg: $pampas;
+$card-bg: $white;
+$card-border: rgba(darken($main-bg, 5%), .8);
+$card-status-bg: $blacksqueeze;
+$card-date: $silver;
+$card-text: $scorpion;
+$card-wind: lighten($scorpion, 20%);
+$card-humidity: lighten($scorpion, 20%);
+$city-london: $white;
+$city-paris: $white;
+$city-berlin: $white;
+$city-amsterdam: $white;
+$city-rome: $white;
+$forecast-list-border: $pampas;
+
+$weather-night: $blackpearl;
+$weather-invert-icon: lighten($silver, 20%);
+$weather-invert-text: lighten($silver, 20%);
+$weather-sun: $supernova;
+$weather-cloud: $gallery;
+$weather-rain: $cloudburst;
+$weather-snow: $blacksqueeze;
+$weather-mist: $iron;
+$weather-heavy-clouds: $steelblue;
