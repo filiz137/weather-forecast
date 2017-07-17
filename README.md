@@ -4,7 +4,7 @@
 
 Created with [Vue.js](https://vuejs.org/) and 🥇 First experience with [Open Weather Data](http://openweathermap.org/api)
 
-<http://filizaltinturk.com/weather-forecast/>
+<http://filizaltinturk.com/weather-forecast/build/>
 
 ## Super Easy Install
 
