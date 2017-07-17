@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>01n</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01n" fill-rule="nonzero" fill="#575757">
+            <g id="Group">
+                <path d="M62,30.382 C61.959,29.046 60.881,28 59.545,28 C58.677,28 57.887,28.456 57.433,29.218 C53.634,35.583 46.416,38.94 39.039,37.763 C30.256,36.366 23.964,28.784 24.079,19.735 C24.168,12.693 27.708,6.983 33.789,4.068 C34.536,3.71 35,2.982 35,2.168 C35,1.056 34.125,0.131 33.008,0.062 C32.357,0.022 31.717,0 31.078,0 C22.526,0 14.265,3.583 8.411,9.83 C2.49,16.15 -0.459,24.404 0.106,33.072 C1.121,48.613 13.6,61.025 29.135,61.944 C29.773,61.982 30.408,62 31.042,62 C38.981,62 46.459,59.043 52.27,53.566 C58.55,47.646 62.01,39.632 62.01,31 C62.01,30.794 62.006,30.587 62,30.382 Z M50.897,52.111 C45.028,57.643 37.338,60.422 29.253,59.947 C14.723,59.087 3.051,47.477 2.102,32.942 C1.573,24.832 4.331,17.109 9.87,11.197 C15.347,5.353 23.077,2 31.078,2 C31.676,2 32.275,2.021 32.884,2.059 C32.95,2.062 33,2.11 33,2.168 C33,2.213 32.961,2.248 32.925,2.265 C26.232,5.473 22.178,11.994 22.08,19.71 C21.953,29.76 28.953,38.184 38.726,39.739 C46.913,41.042 54.93,37.314 59.152,30.242 L59.152,30.241 C59.383,29.854 59.99,30.042 60.002,30.441 C60.007,30.627 60.011,30.813 60.011,30.999 C60.01,39.075 56.773,46.573 50.897,52.111 Z" id="Shape"></path>
+                <rect id="Rectangle-path" x="42" y="0" width="2" height="3"></rect>
+                <rect id="Rectangle-path" x="44" y="3" width="3" height="2"></rect>
+                <rect id="Rectangle-path" x="42" y="5" width="2" height="3"></rect>
+                <rect id="Rectangle-path" x="39" y="3" width="3" height="2"></rect>
+                <rect id="Rectangle-path" x="50" y="14" width="2" height="3"></rect>
+                <rect id="Rectangle-path" x="52" y="17" width="3" height="2"></rect>
+                <rect id="Rectangle-path" x="50" y="19" width="2" height="3"></rect>
+                <rect id="Rectangle-path" x="47" y="17" width="3" height="2"></rect>
+                <rect id="Rectangle-path" x="36" y="13" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="38" y="15" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="36" y="17" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="34" y="15" width="2" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

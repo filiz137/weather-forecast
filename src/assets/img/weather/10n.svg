@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>10n</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10n" fill-rule="nonzero" fill="#575757">
+            <g id="Group">
+                <rect id="Rectangle-path" x="44" y="58" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="44" y="52" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="44" y="46" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="38" y="55" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="38" y="49" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="32" y="58" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="32" y="52" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="32" y="46" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="26" y="55" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="26" y="49" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="20" y="58" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="20" y="52" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="20" y="46" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="14" y="55" width="2" height="4"></rect>
+                <rect id="Rectangle-path" x="14" y="49" width="2" height="4"></rect>
+                <path d="M51.747,26.137 C50.371,18.023 43.307,12 35,12 C28.896,12 23.427,15.232 20.425,20.263 C18.006,18.627 16.397,16.046 16.068,13.174 C15.652,9.547 17.156,6.097 20.089,3.944 C20.668,3.518 21,2.874 21,2.177 C21,1.593 20.771,1.044 20.355,0.632 C19.939,0.219 19.388,-0.009 18.801,-1.11022302e-16 C18.531,0.002 18.3,0.005 18.215,0.009 C13.063,0.219 8.323,2.451 4.868,6.294 C1.417,10.132 -0.297,15.096 0.042,20.272 C0.287,24.016 1.651,27.543 3.977,30.55 C1.552,32.569 0,35.604 0,39 C0,45.065 4.935,50 11,50 L11,48 C6.038,48 2,43.963 2,39 C2,34.037 6.038,30 10.961,29.999 L11.653,30.004 L11.942,29.505 C13.193,27.343 15.514,26 18,26 C18.419,26 18.857,26.042 19.302,26.126 L20.23,26.301 L20.458,25.384 C22.12,18.681 28.1,14 35,14 C42.563,14 48.959,19.66 49.876,27.165 L49.946,27.734 C49.98,28.152 50,28.574 50,29 C50,37.271 43.271,44 35,44 L35,46 C44.374,46 52,38.374 52,29 C52,28.735 51.978,28.475 51.966,28.213 C56.554,29.136 60,33.221 60,38 C60,43.514 55.514,48 50,48 L50,50 C56.617,50 62,44.617 62,38 C62,32.053 57.558,26.991 51.747,26.137 Z M18.756,24.034 C15.417,23.738 12.318,25.317 10.517,28.011 C8.745,28.088 7.084,28.591 5.625,29.412 C3.503,26.703 2.259,23.519 2.038,20.141 C1.734,15.508 3.267,11.065 6.354,7.631 C9.446,4.193 13.687,2.195 18.297,2.007 C18.374,2.004 18.58,2.002 18.819,2 C18.82,2 18.82,2 18.821,2 C18.882,2 18.923,2.028 18.947,2.052 C18.971,2.076 19,2.117 19,2.177 C19,2.256 18.926,2.317 18.905,2.332 C15.386,4.914 13.583,9.052 14.081,13.401 C14.486,16.936 16.501,20.094 19.514,22.046 C19.226,22.689 18.965,23.347 18.756,24.034 Z" id="Shape"></path>
+                <rect id="Rectangle-path" x="27" y="0" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="29" y="2" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="27" y="4" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="25" y="2" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="23" y="8" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="25" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="23" y="12" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="21" y="10" width="2" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
