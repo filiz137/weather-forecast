@@ -284,6 +284,7 @@ main {
         padding: 40px;
         @include mq(desktop) {
             flex-direction: row;
+            height: 100%;
         };
     }
     &-detail {
